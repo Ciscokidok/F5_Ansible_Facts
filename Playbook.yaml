@@ -1,7 +1,5 @@
 ---
   - hosts: bigip
-    collections: 
-    - f5networks.f5_modules.bigip_device_info
     connection: local
      
     tasks:
