@@ -23,24 +23,24 @@
 
     tasks:
       - name: Collect all BIG-IP information
-        bigip_device_info:
-          gather_subset:
-            - management-routes
-          provider: "{{ BIGIP1 }}"
-        delegate_to: localhost
-        register: out
+          bigip_device_info:
+            gather_subset:
+              - management-routes
+            provider: "{{ BIGIP1 }}"
+          delegate_to: localhost
+          register: out
 
       - name: Display the results
         debug:
           var: out
 
       - name: Collect all BIG-IP information
-        bigip_device_info:
-          gather_subset:
-            - management-routes
-          provider: "{{ BIGIP2 }}"
-        delegate_to: localhost
-        register: out2
+          bigip_device_info:
+            gather_subset:
+              - management-routes
+            provider: "{{ BIGIP2 }}"
+          delegate_to: localhost
+          register: out2
 
       - name: Display the results
         debug:
