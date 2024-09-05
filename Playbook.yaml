@@ -1,7 +1,9 @@
 ---
-  - hosts: bigip 
+  - hosts: bigip
+    collections: 
+    - f5networks.f5_modules
     connection: local
-
+     
     vars:
       BIGIP1:
         server: 'BIGIP1.jennylabs.net'
