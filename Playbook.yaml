@@ -24,6 +24,7 @@
         f5networks.f5_modules.bigip_device_info:
           gather_subset:
           - management-routes
+          - remote-syslog 
           provider: "{{ BIGIP1 }}"
         delegate_to: localhost
         register: out
@@ -36,6 +37,7 @@
         f5networks.f5_modules.bigip_device_info:
           gather_subset:
           - management-routes
+          - remote-syslog 
           provider: "{{ BIGIP2 }}"
         delegate_to: localhost
         register: out2
