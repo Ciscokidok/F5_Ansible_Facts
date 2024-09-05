@@ -38,6 +38,7 @@
         bigip_command:
            commands: 
              - "tmsh show sys failover"
+             provider: "{{ BIGIP1 }}"
         register: failover_state
 
       - name: Display Failover state
@@ -62,6 +63,7 @@
         bigip_command:
           commands:
             - "tmsh show sys failover" 
+            provider: "{{ BIGIP2 }}" 
         register: failover_state_2
 
       - name: Display Failover state
