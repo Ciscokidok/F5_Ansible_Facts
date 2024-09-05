@@ -1,4 +1,4 @@
 [bigip]
-BIGIP1.jennylabs.net ansible_host='192.168.15.65' 
-BIGIP2.jennylabs.net ansible_host='192.168.15.147' 
+BIGIP1.jennylabs.net ansible_host=192.168.15.65 
+BIGIP2.jennylabs.net ansible_host=192.168.15.147
 
