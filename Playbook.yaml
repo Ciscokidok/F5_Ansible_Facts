@@ -56,10 +56,10 @@
         debug:
           var: out2
           
-     - name: Get failover state
-       shell: tmsh show sys failover | awk '{print $2}'
-       register: failover_state_2
+      - name: Get failover state
+        shell: tmsh show sys failover | awk '{print $2}'
+        register: failover_state_2
 
-    - name: Display Failover state
-      debug:
-        var: failover_state_2
+      - name: Display Failover state
+        debug:
+          var: failover_state_2
