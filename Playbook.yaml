@@ -33,6 +33,14 @@
       - name: Display the results
         debug:
           var: out
+          
+      - name: Get failover state
+        shell: tmsh show sys failover | awk '{print $2}'
+        register: failover_state
+
+      - name: Display Failover state
+        debug:
+          var: failover_state
 
       - name: Collect all BIG-IP information
         f5networks.f5_modules.bigip_device_info:
@@ -47,3 +55,11 @@
       - name: Display the results
         debug:
           var: out2
+          
+     - name: Get failover state
+       shell: tmsh show sys failover | awk '{print $2}'
+       register: failover_state_2
+
+    - name: Display Failover state
+      debug:
+        var: failover_state_2
