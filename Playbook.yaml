@@ -32,7 +32,7 @@
 
       - name: Display the results
         debug: 
-          msg: {{ out | to_nice_json }} 
+          msg: "{{ out | to_nice_json }}" 
           
       - name: Get failover state
         bigip_command:
@@ -43,7 +43,7 @@
 
       - name: Display Failover state
         debug: 
-          msg: {{ failover_state | to_nice_json }}
+          msg: "{{ failover_state | to_nice_json }}"
  
       - name: Collect all BIG-IP information
         f5networks.f5_modules.bigip_device_info:
@@ -57,7 +57,7 @@
 
       - name: Display the results
         debug: 
-          msg: {{ out2 | to_nice_json }}
+          msg: "{{ out2 | to_nice_json }}"
           
       - name: Get failover state
         bigip_command:
@@ -68,4 +68,4 @@
 
       - name: Display Failover state
         debug: 
-          msg: {{ failover_state_2 | to_nice_json }} 
+          msg: "{{ failover_state_2 | to_nice_json }}" 
