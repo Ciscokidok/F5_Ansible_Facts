@@ -31,8 +31,7 @@
         register: out
 
       - name: Display the results
-        debug:
-          var: out
+        debug: {{ out | to_nice_json }} 
           
       - name: Get failover state
         bigip_command:
@@ -42,9 +41,8 @@
         register: failover_state
 
       - name: Display Failover state
-        debug:
-          var: failover_state
-
+        debug: {{ failover_state | to_nice_json }}
+ 
       - name: Collect all BIG-IP information
         f5networks.f5_modules.bigip_device_info:
           gather_subset:
@@ -56,8 +54,7 @@
         register: out2
 
       - name: Display the results
-        debug:
-          var: out2
+        debug: {{ out2 | to_nice_json }}
           
       - name: Get failover state
         bigip_command:
@@ -67,5 +64,4 @@
         register: failover_state_2
 
       - name: Display Failover state
-        debug:
-          var: failover_state_2
+        debug: {{ failover_state_2 | to_nice_json }} 
